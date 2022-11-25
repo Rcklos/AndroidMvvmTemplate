@@ -1,6 +1,5 @@
 package cn.lentme.example.mvvm.app
 
-import cn.lentme.example.mvvm.request.repository.*
 import cn.lentme.example.mvvm.request.viewmodel.*
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
@@ -12,6 +11,7 @@ val repositoryModel = module {
 }
 
 val viewModelModule = module {
+    viewModel { MainViewModel() }
 }
 
 val appModule = listOf(viewModelModule, repositoryModel)
